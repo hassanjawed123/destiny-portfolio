@@ -2126,7 +2126,7 @@ function IntroScreen({ onEnter, onFinish }) {
       {/* Background image */}
       <img
         className={`intro-bg${transitioning ? " intro-bg--fade" : ""}`}
-        src="/src/assets/intro-bg.jpg"
+        src="/public/assets/intro-bg.jpg"
         alt=""
         onError={e => { e.target.style.display = "none"; }}
       />
