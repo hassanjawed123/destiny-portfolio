@@ -30,6 +30,7 @@ html, body, #root {
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
   font-family: 'Barlow Condensed', 'Rajdhani', sans-serif;
   cursor: crosshair;
+  touch-action: manipulation;
 }
 
 /* ── Starfield canvas ── */
@@ -913,8 +914,14 @@ html, body, #root {
     align-items: flex-start;
   }
 
+  .ghost-panel-hover-list li {
+    flex-wrap: wrap;
+  }
+
   .ghost-panel-hover-list li span:last-child {
-    display: none;
+    width: 100%;
+    font-size: 9px;
+    margin-top: 2px;
   }
 
   /* Info Panel */
@@ -1000,6 +1007,88 @@ html, body, #root {
   /* Intro Text */
   .intro-text {
     gap: 10px;
+    padding: 0 16px;
+    max-width: 95vw;
+  }
+
+  /* Planet wrapper scaling */
+  .planet-wrapper {
+    transform: translate(-50%, -50%) scale(0.58);
+  }
+
+  /* Hourglass icon - smaller on mobile */
+  .ui-badge {
+    top: 16px;
+    left: 16px;
+  }
+
+  .ui-badge canvas {
+    width: 65px;
+    height: 80px;
+  }
+
+  /* Nebula layers - optimize for mobile */
+  .nebula-center {
+    width: 90vw;
+    height: 90vh;
+    transform: translate(-50%, -50%);
+  }
+
+  .nebula-right {
+    width: 80vw;
+    height: 80vh;
+    top: 10%;
+    opacity: 0.5;
+  }
+
+  .nebula-topleft {
+    width: 70vw;
+    height: 70vh;
+    opacity: 0.5;
+  }
+
+  /* Map title - scale down */
+  .map-title {
+    bottom: 12px;
+    left: 12px;
+  }
+
+  .map-title-main {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  .map-title-sub {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  /* Label positioning for mobile */
+  .label-name {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .label-title {
+    font-size: 7px;
+    letter-spacing: 0.5px;
+  }
+
+  .label-sub {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .label-data {
+    font-size: 6px;
+  }
+
+  /* Timeline Panel */
+  .timeline-panel {
+    width: 95vw !important;
+    max-height: 85vh !important;
+    padding: 16px 14px !important;
+    border-radius: 14px !important;
   }
 }
 

@@ -1737,6 +1737,7 @@ function TimelinePanel({ onClose }) {
     >
       <div
         onClick={e => e.stopPropagation()}
+        className="timeline-panel"
         style={{
           width: "min(1000px, 92vw)",
           maxHeight: "88vh",
